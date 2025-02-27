@@ -1,0 +1,124 @@
+:root {
+    --bg-hover-icon: rgb(62, 122, 253);
+    --bg-checked-icon: rgb(6, 64, 189);
+}
+
+.sub-judul {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.judul {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.icon-menu {
+    width: 50px;
+}
+
+.uk-pil {
+    width: 2 em;
+}
+
+span {
+    color: grey;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+.m-15 {
+    margin: 15px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.m-2Persen {
+    margin: 2% !important;
+}
+
+.w-96 {
+    width: 96%;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.p-5 {
+    padding: 5px !important;
+}
+
+.box-sizing {
+    box-sizing: border-box;
+}
+
+#reset {
+    width: 75%;
+    font-size: 18px;
+}
+
+#submit {
+    width: 18%;
+    font-size: 18px;
+}
+
+.font-secondary {
+    font-family: 'DM sans', sans-serif;
+}
+
+.font-15 {
+    font-size: 15px;
+}
+
+.font-17 {
+    font-size: 17px;
+}
+
+.pt-3-5 {
+    padding-top: 1.25rem;
+}
+
+form {
+    background-image: url(images/burgerkebab.jpeg);
+}
+
+input {
+    display: block !important;
+}
+
+.box {
+    background-color: var(--bg-checked-icon);
+    color: white;
+    transition: 0.2s;
+}
+
+.menu:hover {
+    background-color: var(--bg-hover-icon);
+    color: white;
+    transition: 0.2s;
+}

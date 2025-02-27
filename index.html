@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png">
+    <title>Welcome</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-dark-subtle font-secondary">
+    <form class="bg-white m-auto" style="width:500px;border:2px solid white;" action="/action_page.php" method="post">
+        <!-- Header -->
+        <div class="row rounded-2 bg-body-secondary m-10">
+            <div class="d-flex align-items-center m-auto w-auto mt-2">
+                <img src="images/logo.png" class="m-15" style="width:75px;">
+                <h2 class="d-flex m-2 fw-bold">
+                    Toko Burger SI-I
+                </h2>
+            </div>
+            <p class="text-center fw-medium font-17">
+                Anda datang, anda kenyang!!
+            </p>
+        </div>
+        <!-- Bar -->
+        <div class="rounded-2 bg-body-secondary m-10 p-5">
+            <div class="sub-judul m-10 fw-bold font-17">
+                Menu
+            </div>
+            <div>
+                <select class="form-select w-96 m-2Persen rounded-2 fw-normal font-15" aria-label="Default select example">
+                        <option value="burger">Burger</option>
+                        <option value="kebab">Kebab</option>
+                    </select>
+            </div>
+        </div>
+        <!-- Bar 2 Jenis Roti -->
+        <div class="rounded-2 bg-body-secondary m-10 p-5">
+            <div class="sub-judul m-10 fw-bold font-17">
+                Jenis Roti
+            </div>
+            <div>
+                <select class="form-select w-96 m-2Persen rounded-2 fw-normal font-15" aria-label="Default select example">
+                        <option value="original">Original</option>
+                        <option value="wholeWheat">Whole Wheat</option>
+                        <option value="charcoal">Charchoal</option>
+                        <option value="PotatoBun">Potato Bun</option>
+                    </select>
+            </div>
+        </div>
+        <!-- Bar 3 Jenis Daging -->
+        <div class="m-10">
+            <div class="rounded-2 bg-body-secondary p-3">
+                <div class="sub-judul d-block fw-bold font-17">
+                    Daging :
+                </div>
+                <div class="d-flex w-100 align-items-end justify-content-center text-center font-15 fw-normal p-0 m-0">
+                    <div class="form-check form-check-inline m-1 p-3 rounded-4 menu" id="menu-sapi">
+                        <label class="form-check-label m-0" for="pil-sapi" style="width:70px;"><img
+                                    src="images/dagingsapi.png"
+                                    alt="daging-sapi"
+                                    style="width:70px;">Sapi</label>
+                        <input class="form-check-input position-absolute" type="checkbox" id="pil-sapi" value="sapi">
+                    </div>
+                    <div class="form-check form-check-inline m-1 p-3 rounded-4 menu" id="menu-ayam">
+                        <label class="form-check-label m-0" for="pil-ayam" style="width:70px;"><img
+                                    src="images/dagingayam.png"
+                                    alt="daging-ayam"
+                                    style="width:70px;">Ayam</label>
+                        <input class="form-check-input position-absolute" type="checkbox" id="pil-ayam" value="ayam">
+                    </div>
+                    <div class="form-check form-check-inline m-1 p-3 rounded-4 menu" id="menu-vegetarian">
+                        <label class="form-check-label m-0" for="pil-vegetarian" style="width:80px;"><img
+                                    src="images/vegetarian.png" alt="vegetarian"
+                                    style="width:70px;">Vegetarian</label>
+                        <input class="form-check-input position-absolute" type="checkbox" id="pil-vegetarian" value="vegetarian">
+                    </div>
+                </div>
+            </div>
+            <!-- Bar 4 Jenis Topping -->
+            <div class="rounded-2 bg-body-secondary mt-10">
+                <div class="p-3">
+                    <div class="sub-judul d-block fw-bold font-17">
+                        Topping : <span>optional</span>
+                    </div>
+                    <div class="d-flex align-items-end justify-content-center font-15 text-center fw-normal p-0 m-0">
+                        <div class="form-check form-check-inline m-1 p-2 pt-3 rounded-4 menu" id="menu-keju">
+                            <label class="form-check-label m-0" for="top-keju" style="width:60px;"><img
+                                        src="images/cheese.png"
+                                        alt="keju"
+                                        style="width: 40px;">Keju</label>
+                            <input class="form-check-input position-absolute" type="checkbox" id="top-keju" value="keju">
+                        </div>
+                        <div class="form-check form-check-inline m-1 p-2 rounded-4 menu" id="menu-selada">
+                            <label class="form-check-label m-0" for="top-selada" style="width:60px;"><img
+                                        src="images/selada.png"
+                                        alt="selada"
+                                        style="width: 40px;">Selada</label>
+                            <input class="form-check-input position-absolute" type="checkbox" id="top-selada" value="selada">
+                        </div>
+                        <div class="form-check form-check-inline m-1 p-2 rounded-4 menu" id="menu-tomat">
+                            <label class="form-check-label" for="top-tomat" style="width:60px;"><img
+                                        src="images/tomato.png"
+                                        alt="tomat"
+                                        style="width: 40px;">Tomat</label>
+                            <input class="form-check-input position-absolute" type="checkbox" id="top-tomat" value="tomat">
+                        </div>
+                        <div class="form-check form-check-inline m-1 p-2 pt-3 rounded-4 menu" id="menu-bawang">
+                            <label class="form-check-label" for="top-bawang" style="width:60px;"><img
+                                        src="images/bawang.png"
+                                        alt="bawang"
+                                        style="width: 40px;">Bawang</label>
+                            <input class="form-check-input position-absolute" type="checkbox" id="top-bawang" value="bawang">
+                        </div>
+                        <div class="form-check form-check-inline m-1 p-2 rounded-4 menu" id="menu-jalapeno">
+                            <label class="form-check-label" for="top-jalapeno" style="width:60px;"><img
+                                        src="images/jalapeno.png"
+                                        alt="jalapeno"
+                                        style="width: 40px;">Jalapeno</label>
+                            <input class="form-check-input position-absolute" type="checkbox" id="top-jalapeno" value="jalapeno">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex m-10">
+            <!-- Bar 5 Sauss -->
+            <div class="w-50 rounded-2 bg-body-secondary mr-10">
+                <div class="sub-judul d-block m-10 font-17 text-center fw-bold">
+                    Saus
+                </div>
+                <div class="m-0 p-0 font-15 fw-normal">
+                    <div class="form-check m-2 p-0 align-items-center rounded-4 menu" id="menu-mayonaise">
+                        <label class="form-check-label m-1 p-0" for="saus-mayo">Mayonaise</label>
+                        <input class="form-check-input m-2" type="checkbox" id="saus-mayo" value="mayonaise">
+                    </div>
+                    <div class="form-check m-2 p-0 align-items-center rounded-4 menu" id="menu-bbq">
+                        <label class="form-check-label m-1 p-0" for="saus-bbq">BBQ</label>
+                        <input class="form-check-input m-2" type="checkbox" id="saus-bbq" value="bbq">
+                    </div>
+                    <div class="form-check m-2 p-0 align-items-center rounded-4 menu" id="menu-mustard">
+                        <label class="form-check-label m-1 p-0" for="saus-mustard">Mustard</label>
+                        <input class="form-check-input m-2" type="checkbox" id="saus-mustard" value="mustard">
+                    </div>
+                </div>
+            </div>
+            <!-- Bar 6 Ukuran Patty -->
+            <div class="w-50 rounded-2 bg-body-secondary">
+                <div class="sub-judul d-block m-10 font-17 text-center fw-bold">
+                    Ukuran Patty
+                </div>
+                <div class="m-0 p-0 font-15 fw-normal">
+                    <div class="form-check m-2 p-0 align-items-baseline rounded-4 menu">
+                        <label class="form-check-label m-2 p-0" for="size1">Regular</label>
+                        <input class="form-check-input m-2 p-0" type="radio" id="size1" value="regular">
+                    </div>
+                    <div class="form-check m-2 p-0 align-items-baseline rounded-4 menu">
+                        <input class="form-check-input m-2 p-0" type="radio" id="size2" value="doublePatty">
+                        <label class="form-check-label m-2 p-0" for="size2">Double
+                                Patty</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bar 7 Minuman -->
+        <div class="d-block rounded-2 bg-body-secondary m-10 p-3">
+            <div class="sub-judul d-block fw-bold font-17">
+                Sides : <span>optional</span>
+            </div>
+            <div class="d-flex align-items-end justify-content-center font-15 text-center fw-normal p-0 m-0">
+                <div class="form-check form-check-inline font-15 fw-normal menu m-1 p-2 rounded-4" id="menu-tea">
+                    <label class="form-check-label text-center" for="side-tea" style="width:80px;"><img
+                                class="icon-menu m-auto"
+                                src="images/ice-tea.png"
+                                alt="ice-tea" 
+                                style="width: 65px;">Ice
+                            Tea</label>
+                    <input class="form-check-input position-absolute" type="checkbox" id="side-tea" value="iceTea">
+                </div>
+                <div class="form-check form-check-inline font-15 fw-normal menu m-1 p-2 pt-3 rounded-4" id="menu-onion-rings">
+                    <label class="form-check-label text-center" for="side-onion-rings" style="width:90px;"><img
+                                class="icon-menu m-auto"
+                                src="images/onion-rings.png"
+                                alt="onion-rings" 
+                                style="width: 80px;">Onion
+                            Rings</label>
+                    <input class="form-check-input position-absolute" type="checkbox" id="side-onion-rings" value="onionRings">
+                </div>
+                <div class="form-check form-check-inline font-15 fw-normal menu m-1 p-2 pt-3 rounded-4" id="menu-french-fries">
+                    <label class="form-check-label text-center" for="side-french-fries" style="width:90px;"><img
+                                class="icon-menu m-auto"
+                                src="images/french-fries.png"
+                                alt="french-fries" 
+                                style="width: 60px;">French
+                            Fries</label>
+                    <input class="form-check-input position-absolute" type="checkbox" id="side-french-fries" value="frenchFries">
+                </div>
+            </div>
+        </div>
+        <!-- Bar 8 Note -->
+        <div class="rounded-2 bg-body-secondary m-10 p-3">
+            <label class="sub-judul d-block font-17 fw-bold" for="w3review">Note</label>
+            <textarea class="border border-secondary-subtle rounded-2 font-15 fw-normal" id="w3review" rows="5" style="width:445px;">Write your additional note here</textarea>
+            <br>
+        </div>
+        <div style="width:500px;">
+            <button id="reset" class="btn m-10 text-bg-primary font-17 fw-normal" type="reset">Reset</button>
+            <button id="submit " class="btn mr-10 text-bg-success font-17 fw-normal" type="submit ">Submit</button>
+        </div>
+        <script type="text/javascript" src="behavior.js"></script>
+    </form>
+</body>
+
+</html>
