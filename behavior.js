@@ -59,6 +59,7 @@ pilAyam.addEventListener('click', function() {
     y++;
     if (y == 2) {
         document.getElementById('menu-ayam').checked = false;
+        ayam.classList.remove('box');
         y = 0;
     }
 });
