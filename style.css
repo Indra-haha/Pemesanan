@@ -1,6 +1,6 @@
 :root {
-    --bg-hover-icon: rgb(62, 122, 253);
-    --bg-checked-icon: rgb(6, 64, 189);
+    --bg-hover-icon: #FFC100;
+    --bg-checked-icon: #FF8A08;
 }
 
 .sub-judul {
@@ -114,11 +114,10 @@ input {
 .box {
     background-color: var(--bg-checked-icon);
     color: white;
-    transition: 0.2s;
+    transition-duration: 0.2s;
 }
 
 .menu:hover {
     background-color: var(--bg-hover-icon);
-    color: white;
     transition: 0.2s;
 }
