@@ -1,35 +1,36 @@
-menuSapi = document.getElementById('menu-sapi');
-inputSapi = document.getElementById('pil-sapi');
-menuAyam = document.getElementById('menu-ayam');
-inputAyam = document.getElementById('pil-ayam');
-menuVegetarian = document.getElementById('menu-vegetarian');
-inputVegetarian = document.getElementById('pil-vegetarian');
-menuKeju = document.getElementById('menu-keju');
-topKeju = document.getElementById('top-keju');
-menuSelada = document.getElementById('menu-selada');
-topSelada = document.getElementById('top-selada');
-menuTomat = document.getElementById('menu-tomat');
-topTomat = document.getElementById('top-tomat');
-menuBawang = document.getElementById('menu-bawang');
-topBawang = document.getElementById('top-bawang');
-menuJalapeno = document.getElementById('menu-jalapeno');
-topJalapeno = document.getElementById('top-jalapeno');
-menuMayo = document.getElementById('menu-mayonaise');
-sausMayo = document.getElementById('saus-mayo');
-menuBbq = document.getElementById('menu-bbq');
-sausBbq = document.getElementById('saus-bbq');
-menuMustard = document.getElementById('menu-mustard');
-sausMustard = document.getElementById('saus-mustard');
-menuPatty1 = document.getElementById('patty-regular');
-patty1 = document.getElementById('size1');
-menuPatty2 = document.getElementById('patty-double');
-patty2 = document.getElementById('size2');
-menuTeh = document.getElementById('menu-tea');
-sideTeh = document.getElementById('side-tea');
-menuOnions = document.getElementById('menu-onion-rings');
-sideOnions = document.getElementById('side-onion-rings');
-menuFrench = document.getElementById('menu-french-fries');
-sideFrench = document.getElementById('side-french-fries')
+const menuSapi = document.getElementById('menu-sapi');
+const inputSapi = document.getElementById('pil-sapi');
+const menuAyam = document.getElementById('menu-ayam');
+const inputAyam = document.getElementById('pil-ayam');
+const menuVegetarian = document.getElementById('menu-vegetarian');
+const inputVegetarian = document.getElementById('pil-vegetarian');
+const menuKeju = document.getElementById('menu-keju');
+const topKeju = document.getElementById('top-keju');
+const menuSelada = document.getElementById('menu-selada');
+const topSelada = document.getElementById('top-selada');
+const menuTomat = document.getElementById('menu-tomat');
+const topTomat = document.getElementById('top-tomat');
+const menuBawang = document.getElementById('menu-bawang');
+const topBawang = document.getElementById('top-bawang');
+const menuJalapeno = document.getElementById('menu-jalapeno');
+const topJalapeno = document.getElementById('top-jalapeno');
+const menuMayo = document.getElementById('menu-mayonaise');
+const sausMayo = document.getElementById('saus-mayo');
+const menuBbq = document.getElementById('menu-bbq');
+const sausBbq = document.getElementById('saus-bbq');
+const menuMustard = document.getElementById('menu-mustard');
+const sausMustard = document.getElementById('saus-mustard');
+const menuPatty1 = document.getElementById('patty-regular');
+const patty1 = document.getElementById('size1');
+const menuPatty2 = document.getElementById('patty-double');
+const patty2 = document.getElementById('size2');
+const menuTeh = document.getElementById('menu-tea');
+const sideTeh = document.getElementById('side-tea');
+const menuOnions = document.getElementById('menu-onion-rings');
+const sideOnions = document.getElementById('side-onion-rings');
+const menuFrench = document.getElementById('menu-french-fries');
+const sideFrench = document.getElementById('side-french-fries')
+const reset = document.getElementById('reset');
 
 // default
 if (inputSapi.checked == true) {
@@ -162,4 +163,21 @@ sideFrench.addEventListener('change', function() {
     } else {
         menuFrench.classList.remove('box');
     }
+});
+
+reset.addEventListener('click', function() {
+    menuAyam.classList.remove('box');
+    menuVegetarian.classList.remove('box');
+    menuKeju.classList.remove('box');
+    menuSelada.classList.remove('box');
+    menuTomat.classList.remove('box');
+    menuBawang.classList.remove('box');
+    menuJalapeno.classList.remove('box');
+    menuBbq.classList.remove('box');
+    menuMustard.classList.remove('box');
+    menuPatty1.classList.remove('box');
+    menuPatty2.classList.remove('box');
+    menuTeh.classList.remove('box');
+    menuOnions.classList.remove('box');
+    menuFrench.classList.remove('box');
 });
