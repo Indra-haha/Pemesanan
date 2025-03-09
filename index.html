@@ -15,7 +15,7 @@
 </head>
 
 <body class="bg-dark-subtle font-secondary">
-    <form class="bg-white m-auto" style="width:500px;border:2px solid white;" action="/action_page.php" method="post">
+    <form class="bg-white m-auto" style="width:500px;border:2px solid white;" action="action.php" method="POST">
         <!-- Header -->
         <div class="row rounded-2 bg-body-secondary m-10">
             <div class="d-flex align-items-center m-auto w-auto mt-2">
@@ -34,9 +34,9 @@
                 Menu
             </div>
             <div>
-                <select class="form-select w-96 m-2Persen rounded-2 fw-normal font-17 form-select-lg mb-3">
-                        <option value="burger">Burger</option>
-                        <option value="kebab">Kebab</option>
+                <select class="form-select w-96 m-2Persen rounded-2 fw-normal font-17 form-select-lg mb-3" name="menu">
+                        <option value="Burger">Burger</option>
+                        <option value="Kebab">Kebab</option>
                     </select>
             </div>
         </div>
@@ -46,11 +46,11 @@
                 Jenis Roti
             </div>
             <div>
-                <select class="form-select w-96 m-2Persen rounded-2 fw-normal font-17 form-select-lg mb-3">
-                        <option value="original">Original</option>
-                        <option value="wholeWheat">Whole Wheat</option>
-                        <option value="charcoal">Charchoal</option>
-                        <option value="PotatoBun">Potato Bun</option>
+                <select class="form-select w-96 m-2Persen rounded-2 fw-normal font-17 form-select-lg mb-3" name="roti">
+                        <option value="Original">Original</option>
+                        <option value="Whole Wheat">Whole Wheat</option>
+                        <option value="Charcoal">Charchoal</option>
+                        <option value="Potato Bun">Potato Bun</option>
                     </select>
             </div>
         </div>
@@ -64,19 +64,19 @@
                     <div class="form-check form-check-inline m-1 p-3 rounded-4 menu" id="menu-sapi">
                         <label class="form-check-label m-0" for="pil-sapi" style="width:70px;"><img
                                     src="images/dagingsapi.png"
-                                    alt="daging-sapi"
-                                    style="width:70px;">Sapi<input class="form-check-input position-absolute" type="checkbox" id="pil-sapi" name="input-sapi" value="sapi" checked></label>
+                                    alt="Gambar-sapi"
+                                    style="width:70px;">Sapi<input id="pil-sapi" name="pil-sapi" class="form-check-input position-absolute" type="checkbox" value="Sapi" checked></label>
                     </div>
                     <div class="form-check form-check-inline m-1 p-3 rounded-4 menu" id="menu-ayam">
                         <label class="form-check-label m-0" for="pil-ayam" style="width:70px;"><img
                                     src="images/dagingayam.png"
-                                    alt="daging-ayam"-
-                                    style="width:70px;">Ayam<input class="form-check-input position-absolute" type="checkbox" id="pil-ayam" value="ayam"></label>
+                                    alt="Gambar-ayam"
+                                    style="width:70px;">Ayam<input id="pil-ayam" name="pil-ayam" class="form-check-input position-absolute" type="checkbox" value="Ayam"></label>
                     </div>
                     <div class="form-check form-check-inline m-1 p-3 rounded-4 menu" id="menu-vegetarian">
                         <label class="form-check-label m-0" for="pil-vegetarian" style="width:80px;"><img
-                                    src="images/vegetarian.png" alt="vegetarian"
-                                    style="width:65px;">Vegetarian<input class="form-check-input position-absolute" type="checkbox" id="pil-vegetarian" value="vegetarian"></label>
+                                    src="images/vegetarian.png" alt="Gambar-vegetarian"
+                                    style="width:65px;">Vegetarian<input id="pil-vegetarian" name="pil-vegetarian" class="form-check-input position-absolute" type="checkbox" value="Vegetarian"></label>
                     </div>
                 </div>
             </div>
@@ -91,31 +91,31 @@
                             <label class="form-check-label m-0" for="top-keju" style="width:60px;"><img
                                         src="images/cheese.png"
                                         alt="keju"
-                                        style="width: 40px;">Keju<input class="form-check-input position-absolute" type="checkbox" id="top-keju" value="keju"></label>
+                                        style="width: 40px;">Keju<input class="form-check-input position-absolute" type="checkbox" id="top-keju" name="keju" value="Keju"></label>
                         </div>
                         <div class="form-check form-check-inline m-1 p-2 rounded-4 menu" id="menu-selada">
                             <label class="form-check-label m-0" for="top-selada" style="width:60px;"><img
                                         src="images/selada.png"
                                         alt="selada"
-                                        style="width: 35px;">Selada<input class="form-check-input position-absolute" type="checkbox" id="top-selada" value="selada"></label>
+                                        style="width: 35px;">Selada<input class="form-check-input position-absolute" type="checkbox" id="top-selada" name="selada" value="Selada"></label>
                         </div>
-                        <div class="form-check form-check-inline m-1 p-2 rounded-4 menu" id="menu-tomat">
-                            <label class="form-check-label" for="top-tomat" style="width:60px;"><img
-                                        src="images/tomato.png"
-                                        alt="tomat"
-                                        style="width: 40px;">Tomat<input class="form-check-input position-absolute" type="checkbox" id="top-tomat" value="tomat"></label>
+                        <div class="form-check form-check-inline m-1 p-2 rounded-4 menu" id="menu-telur">
+                            <label class="form-check-label" for="top-telur" style="width:60px;"><img
+                                        src="images/telur.png"
+                                        alt="telur"
+                                        style="width: 42px;">Telur<input class="form-check-input position-absolute" type="checkbox" id="top-telur" name="telur" value="Telur"></label>
                         </div>
-                        <div class="form-check form-check-inline m-1 p-2 pt-3 rounded-4 menu" id="menu-bawang">
-                            <label class="form-check-label" for="top-bawang" style="width:60px;"><img
-                                        src="images/bawang.png"
-                                        alt="bawang"
-                                        style="width: 40px;">Bawang<input class="form-check-input position-absolute" type="checkbox" id="top-bawang" value="bawang"></label>
+                        <div class="form-check form-check-inline m-1 p-2 pt-3 rounded-4 menu" id="menu-patty">
+                            <label class="form-check-label" for="top-patty" style="width:60px;"><img
+                                        src="images/patty.png"
+                                        alt="patty"
+                                        style="width: 42px;">Patty<input class="form-check-input position-absolute" type="checkbox" id="top-patty" name="patty" value="Patty"></label>
                         </div>
                         <div class="form-check form-check-inline m-1 p-2 rounded-4 menu" id="menu-jalapeno">
                             <label class="form-check-label" for="top-jalapeno" style="width:60px;"><img
                                         src="images/jalapeno.png"
                                         alt="jalapeno"
-                                        style="width: 35px;">Jalapeno<input class="form-check-input position-absolute" type="checkbox" id="top-jalapeno" value="jalapeno"></label>
+                                        style="width: 35px;">Jalapeno<input class="form-check-input position-absolute" type="checkbox" id="top-jalapeno" name="jalapeno" value="Jalapeno"></label>
                         </div>
                     </div>
                 </div>
@@ -129,14 +129,17 @@
                     Saus
                 </div>
                 <div class="m-0 p-0 font-15 fw-normal">
-                    <div class="form-check m-2 p-0 align-items-center rounded-4 menu" id="menu-mayonaise">
-                        <label class="form-check-label m-1 p-0" for="saus-mayo">Mayonaise<input class="form-check-input m-2" type="checkbox" id="saus-mayo" value="mayonaise" checked></label>
+                    <div class="form-check m-1 p-0 align-items-center rounded-4 menu" id="menu-mayonaise">
+                        <label class="form-check-label m-1 p-0" for="saus-mayo">Mayonaise<input class="form-check-input m-1" type="checkbox" id="saus-mayo" name="mayo" value="Mayonaise" checked></label>
                     </div>
-                    <div class="form-check m-2 p-0 align-items-center rounded-4 menu" id="menu-bbq">
-                        <label class="form-check-label m-1 p-0" for="saus-bbq">BBQ<input class="form-check-input m-2" type="checkbox" id="saus-bbq" value="bbq"></label>
+                    <div class="form-check m-1 p-0 align-items-center rounded-4 menu" id="menu-bbq">
+                        <label class="form-check-label m-1 p-0" for="saus-bbq">BBQ<input class="form-check-input m-1" type="checkbox" id="saus-bbq" name="bbq" value="Bbq"></label>
                     </div>
-                    <div class="form-check m-2 p-0 align-items-center rounded-4 menu" id="menu-mustard">
-                        <label class="form-check-label m-1 p-0" for="saus-mustard">Mustard<input class="form-check-input m-2" type="checkbox" id="saus-mustard" value="bbq"></label>
+                    <div class="form-check m-1 p-0 align-items-center rounded-4 menu" id="menu-mustard">
+                        <label class="form-check-label m-1 p-0" for="saus-mustard">Mustard<input class="form-check-input m-1" type="checkbox" id="saus-mustard" name="mustard" value="Mustard"></label>
+                    </div>
+                    <div class="form-check m-1 p-0 align-items-center rounded-4 menu mb-2" id="menu-sambal">
+                        <label class="form-check-label m-1 p-0" for="saus-sambal">Sambal<input class="form-check-input m-1" type="checkbox" id="saus-sambal" name="sambal" value="Sambal"></label>
                     </div>
                 </div>
             </div>
@@ -147,10 +150,10 @@
                 </div>
                 <div class="m-0 p-0 font-15 fw-normal">
                     <div class="form-check m-2 p-0 align-items-baseline rounded-4 menu" id="patty-regular">
-                        <label class="form-check-label m-2 p-0" for="size1">Regular<input class="form-check-input m-2 p-0" type="radio" id="size1" value="regular"></label>
+                        <label class="form-check-label m-1 p-0" for="size1">Regular<input class="form-check-input m-1 p-0" type="radio" id="size1" name="regular" value="Regular"></label>
                     </div>
                     <div class="form-check m-2 p-0 align-items-baseline rounded-4 menu" id="patty-double">
-                        <label class="form-check-label m-2 p-0" for="size2">Double Patty<input class="form-check-input m-2 p-0" type="radio" id="size2" value="doublePatty"></label>
+                        <label class="form-check-label m-1 p-0" for="size2">Double Patty<input class="form-check-input m-1 p-0" type="radio" id="size2" name="double" value="Double Patty"></label>
                     </div>
                 </div>
             </div>
@@ -167,7 +170,7 @@
                                 src="images/ice-tea.png"
                                 alt="ice-tea"
                                 style="width: 65px;">Ice
-                            Tea <input class="form-check-input position-absolute" type="checkbox" id="side-tea" value="iceTea"></label>
+                            Tea <input class="form-check-input position-absolute" type="checkbox" id="side-tea" name="teh" value="Ice Tea"></label>
                 </div>
                 <div class="form-check form-check-inline font-15 fw-normal menu m-1 p-2 pt-3 rounded-4" id="menu-onion-rings">
                     <label class="form-check-label text-center" for="side-onion-rings" style="width:90px;"><img
@@ -175,7 +178,7 @@
                                 src="images/onion-rings.png"
                                 alt="onion-rings"
                                 style="width: 80px;">Onion
-                            Rings<input class="form-check-input position-absolute" type="checkbox" id="side-onion-rings" value="onionRings"></label>
+                            Rings<input class="form-check-input position-absolute" type="checkbox" id="side-onion-rings" name="onion" value="Onion Rings"></label>
                 </div>
                 <div class="form-check form-check-inline font-15 fw-normal menu m-1 p-2 pt-3 rounded-4" id="menu-french-fries">
                     <label class="form-check-label text-center" for="side-french-fries" style="width:90px;"><img
@@ -183,14 +186,14 @@
                                 src="images/french-fries.png"
                                 alt="french-fries"
                                 style="width: 60px;">French
-                            Fries<input class="form-check-input position-absolute" type="checkbox" id="side-french-fries" value="frenchFries"></label>
+                            Fries<input class="form-check-input position-absolute" type="checkbox" id="side-french-fries" name="french" value="French Fries"></label>
                 </div>
             </div>
         </div>
         <!-- Bar 8 Note -->
         <div class="rounded-2 bg-body-secondary m-10 p-3">
             <label class="sub-judul d-block font-17 fw-bold" for="w3review">Note</label>
-            <textarea class="rounded-2 font-15 fw-normal" id="w3review" rows="5" style="width:445px;" placeholder="Write your additional note here"></textarea>
+            <textarea class="rounded-2 font-15 fw-normal" id="w3review" rows="5" style="width:445px;" placeholder="Write your additional note here" name="notes"></textarea>
             <br>
         </div>
         <div style="width:500px;">

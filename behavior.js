@@ -8,10 +8,10 @@ const menuKeju = document.getElementById('menu-keju');
 const topKeju = document.getElementById('top-keju');
 const menuSelada = document.getElementById('menu-selada');
 const topSelada = document.getElementById('top-selada');
-const menuTomat = document.getElementById('menu-tomat');
-const topTomat = document.getElementById('top-tomat');
-const menuBawang = document.getElementById('menu-bawang');
-const topBawang = document.getElementById('top-bawang');
+const menuTelur = document.getElementById('menu-telur');
+const topTelur = document.getElementById('top-telur');
+const menuPatty = document.getElementById('menu-patty');
+const topPatty = document.getElementById('top-patty');
 const menuJalapeno = document.getElementById('menu-jalapeno');
 const topJalapeno = document.getElementById('top-jalapeno');
 const menuMayo = document.getElementById('menu-mayonaise');
@@ -20,6 +20,8 @@ const menuBbq = document.getElementById('menu-bbq');
 const sausBbq = document.getElementById('saus-bbq');
 const menuMustard = document.getElementById('menu-mustard');
 const sausMustard = document.getElementById('saus-mustard');
+const menuSambal = document.getElementById('menu-sambal');
+const sausSambal = document.getElementById('saus-sambal');
 const menuPatty1 = document.getElementById('patty-regular');
 const patty1 = document.getElementById('size1');
 const menuPatty2 = document.getElementById('patty-double');
@@ -38,21 +40,33 @@ if (inputSapi.checked == true) {
 }
 inputSapi.addEventListener('change', function() {
     if (inputSapi.checked) {
+        inputAyam.checked = false;
+        inputVegetarian.checked = false;
         menuSapi.classList.add('box');
+        menuAyam.classList.remove('box');
+        menuVegetarian.classList.remove('box');
     } else {
         menuSapi.classList.remove('box');
     }
 });
 inputAyam.addEventListener('change', function() {
     if (inputAyam.checked) {
+        inputSapi.checked = false;
+        inputVegetarian.checked = false;
         menuAyam.classList.add('box');
+        menuSapi.classList.remove('box');
+        menuVegetarian.classList.remove('box');
     } else {
         menuAyam.classList.remove('box');
     }
 });
 inputVegetarian.addEventListener('change', function() {
     if (inputVegetarian.checked) {
+        inputSapi.checked = false;
+        inputAyam.checked = false;
         menuVegetarian.classList.add('box');
+        menuAyam.classList.remove('box');
+        menuSapi.classList.remove('box');
     } else {
         menuVegetarian.classList.remove('box');
     }
@@ -72,18 +86,18 @@ topSelada.addEventListener('change', function() {
         menuSelada.classList.remove('box');
     }
 });
-topTomat.addEventListener('change', function() {
-    if (topTomat.checked) {
-        menuTomat.classList.add('box');
+topTelur.addEventListener('change', function() {
+    if (topTelur.checked) {
+        menuTelur.classList.add('box');
     } else {
-        menuTomat.classList.remove('box');
+        menuTelur.classList.remove('box');
     }
 });
-topBawang.addEventListener('change', function() {
-    if (topBawang.checked) {
-        menuBawang.classList.add('box');
+topPatty.addEventListener('change', function() {
+    if (topPatty.checked) {
+        menuPatty.classList.add('box');
     } else {
-        menuBawang.classList.remove('box');
+        menuPatty.classList.remove('box');
     }
 });
 topJalapeno.addEventListener('change', function() {
@@ -123,23 +137,33 @@ menuMustard.addEventListener('click', function() {
         menuMustard.classList.remove('box');
     }
 });
+menuSambal.addEventListener('click', function() {
+    sausSambal.checked = !sausSambal.checked;
+    if (sausSambal.checked) {
+        menuSambal.classList.add('box');
+    } else {
+        menuSambal.classList.remove('box');
+    }
+});
 
 menuPatty1.addEventListener('click', function() {
     patty1.checked = !patty1.checked;
     if (patty1.checked) {
         patty2.checked = false;
-        console.log('berhasil');
+        menuPatty1.classList.add('box');
+        menuPatty2.classList.remove('box');
     } else {
-        console.log('berhasil juga');
+        menuPatty1.classList.remove('box');
     }
 });
 menuPatty2.addEventListener('click', function() {
     patty2.checked = !patty2.checked;
     if (patty2.checked) {
         patty1.checked = false;
-        console.log('berhasil');
+        menuPatty2.classList.add('box');
+        menuPatty1.classList.remove('box');
     } else {
-        console.log('berhasil juga');
+        menuPatty2.classList.remove('box');
     }
 });
 
