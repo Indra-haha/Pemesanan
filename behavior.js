@@ -33,7 +33,6 @@ const sideOnions = document.getElementById('side-onion-rings');
 const menuFrench = document.getElementById('menu-french-fries');
 const sideFrench = document.getElementById('side-french-fries')
 const reset = document.getElementById('reset');
-
 // default
 if (inputSapi.checked == true) {
     menuSapi.classList.add('box');

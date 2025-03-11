@@ -171,107 +171,108 @@ if ($patty === "Regular" || $patty === "Double Patty") {
                 Detail Pemesanan
             </div>
         </div>
-
-        <div class="mx-1 p-0 fw-normal font-15 align-items-center d-flex row">
-            <?php
-            foreach ($data as $baris) {
-                foreach ($baris as $kolom) {
-            ?>
-                    <div class="mb-1 col-3 p-1 bg-white px-2 table-custom" style="width:160px;"><?= $kolom ?></div>
-            <?php }
-            }
-            ?>
-        </div>
-        <div class="mx-1 d-flex bg-white row align-items-baseline" style="width:480px;">
-            <div class="col-1 p-1 bg-white px-2 table-custom" style="width:160px;">Topping</div>
-            <div class="m-0 p-0 fw-normal font-15 align-items-center d-flex row" style="width:320px;">
+        <form action="" method="POST">
+            <div class="mx-1 p-0 fw-normal font-15 align-items-center d-flex row">
                 <?php
-                foreach ($filteredToppingGrab as $baris) {
-                    if ($baris >= 2) {
-                        foreach ($baris as $kolom) {
-                            if (is_int($kolom)) {
+                foreach ($data as $baris) {
+                    foreach ($baris as $kolom) {
                 ?>
-                                <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;"><?= "Rp. " . $kolom ?></div>
-                            <?php
-                            } else {
-                            ?><div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;"><?= $kolom ?></div>
-                        <?php
-                            }
-                        }
-                    } else { ?>
-                        <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;"><?= $baris ?></div>
+                        <div class="mb-1 col-3 p-1 bg-white px-2 table-custom" style="width:160px;"><?= $kolom ?></div>
                 <?php }
-                } ?>
-            </div>
-        </div>
-        <div class="mx-1 d-flex mt-1 mb-0 bg-white align-items-baseline" style="width:480px;">
-            <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;">Saus</div>
-            <div class="m-0 p-0 fw-normal font-15 align-items-center d-flex row" style="width:160px;">
-                <?php
-                foreach ($filteredSausGrab as $item) {
-                ?>
-                    <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;"><?= $item ?></div>
-                <?php
                 }
                 ?>
             </div>
-        </div>
-        <div class="mx-1 d-flex mt-1 mb-0 bg-white align-items-baseline" style="width:480px;">
-            <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;">Side</div>
-            <div class="m-0 p- fw-normal font-15 align-items-center d-flex row" style="width:320px;">
-                <?php
-                foreach ($filteredSideGrab as $item) {
-                    if ($item >= 2) {
-                        foreach ($item as $kolom) {
-                            if (is_int($kolom)) {
-                ?>
-                                <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;"><?= "Rp. " . $kolom ?></div>
+            <div class="mx-1 d-flex bg-white row align-items-baseline" style="width:480px;">
+                <div class="col-1 p-1 bg-white px-2 table-custom" style="width:160px;">Topping</div>
+                <div class="m-0 p-0 fw-normal font-15 align-items-center d-flex row" style="width:320px;">
+                    <?php
+                    foreach ($filteredToppingGrab as $baris) {
+                        if ($baris >= 2) {
+                            foreach ($baris as $kolom) {
+                                if (is_int($kolom)) {
+                    ?>
+                                    <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;"><?= "Rp. " . $kolom ?></div>
+                                <?php
+                                } else {
+                                ?><div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;"><?= $kolom ?></div>
                             <?php
-                            } else {
-                            ?>
-                                <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;"><?= $kolom ?></div>
-                        <?php }
-                        }
-                    } else { ?>
+                                }
+                            }
+                        } else { ?>
+                            <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;"><?= $baris ?></div>
+                    <?php }
+                    } ?>
+                </div>
+            </div>
+            <div class="mx-1 d-flex mt-1 mb-0 bg-white align-items-baseline" style="width:480px;">
+                <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;">Saus</div>
+                <div class="m-0 p-0 fw-normal font-15 align-items-center d-flex row" style="width:160px;">
+                    <?php
+                    foreach ($filteredSausGrab as $item) {
+                    ?>
                         <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;"><?= $item ?></div>
-                <?php }
-                } ?>
+                    <?php
+                    }
+                    ?>
+                </div>
             </div>
-        </div>
-        <div class="mx-1 d-flex mt-1 mb-0 align-items-baseline bg-white p-1" style="width:480px;">
-            <div class="mb-0 col-1 px-1 table-custom text-start fw-normal font-15" style="width:160px;">Note</div>
-            <div class="m-0 col-1 p-1 fw-normal font-15 " style="width:320px;"><?= $note ?></div>
-        </div>
-        <div class="mx-1 d-flex mt-1 mb-0 align-items-baseline bg-white" style="width:480px;">
-            <div class="mb-0 col-1 px-2 table-custom text-end fw-bold font-15" style="width:320px;">Total</div>
-            <div class="m-0 col-1 p-1 fw-normal font-15 " style="width:160px;"><?= "Rp. " . $total ?></div>
-        </div>
-        <div class="mx-1 d-flex mt-1 mb-0 align-items-baseline bg-white" style="width:480px;">
-            <div class="mb-0 col-1 px-2 table-custom text-end fw-bold font-15" style="width:320px;">Tax(10%)</div>
-            <div class="m-0 col-1 p-1 fw-normal font-15 " style="width:160px;"><?= "Rp. " . $tax ?></div>
-        </div>
-        <div class="mx-1 d-flex mt-1 mb-0 align-items-baseline rounded-2 rounded-top-0" style="width:480px;color :white;background-color:orange;">
-            <div class="mb-0 col-1 px-2 table-custom text-end fw-bold font-17" style="width:320px;">Total Akhir</div>
-            <div class="m-0 col-1 p-1 fw-bold font-15 " style="width:160px;"><?= "Rp. " . $totalAkhir ?></div>
-        </div>
-        <div class="d-flex mx-1" style="width:475px;">
-            <div style="width:60%;">
-                <i class="fw-normal p-3 mt-2" style="font-size:14px;">Semoga Harimu Menyenangkan</i>
+            <div class="mx-1 d-flex mt-1 mb-0 bg-white align-items-baseline" style="width:480px;">
+                <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;">Side</div>
+                <div class="m-0 p- fw-normal font-15 align-items-center d-flex row" style="width:320px;">
+                    <?php
+                    foreach ($filteredSideGrab as $item) {
+                        if ($item >= 2) {
+                            foreach ($item as $kolom) {
+                                if (is_int($kolom)) {
+                    ?>
+                                    <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;"><?= "Rp. " . $kolom ?></div>
+                                <?php
+                                } else {
+                                ?>
+                                    <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;"><?= $kolom ?></div>
+                            <?php }
+                            }
+                        } else { ?>
+                            <div class="mb-0 col-1 p-1 bg-white px-2 table-custom" style="width:160px;"><?= $item ?></div>
+                    <?php }
+                    } ?>
+                </div>
             </div>
-            <div class="d-block p-0 m-1 mt-1 mr-0 align-items-end" style="width:40%;">
-                <?php if ($statusComplete != "") { ?>
-                    <a href="index.html" class="btn btn-primary m-0 mt-1 font-12 fw-normal" style="width:100%;">Kembali</a>
-                    <div class="text-center" style="font-size:12px;"><?= $statusComplete ?></div>
-                <?php
-                } else {
-                ?>
-                    <button type="submitPesanan" class="btn btn-success m-0 mt-1" name="submitPesanan" value="kirim" style="width:100%;">Pesan</button>
-                    <div class="text-center" style="font-size:12px;">Cek Dulu Pesananmu</div>
-                <?php
-                } ?>
-
+            <div class="mx-1 d-flex mt-1 mb-0 align-items-baseline bg-white p-1" style="width:480px;">
+                <div class="mb-0 col-1 px-1 table-custom text-start fw-normal font-15" style="width:160px;">Note</div>
+                <div class="m-0 col-1 p-0 fw-normal font-15 " style="width:320px;"><?= $note ?></div>
             </div>
-        </div>
+            <div class="mx-1 d-flex mt-1 mb-0 align-items-baseline bg-white" style="width:480px;">
+                <div class="mb-0 col-1 px-2 table-custom text-end fw-bold font-15" style="width:320px;">Total</div>
+                <div class="m-0 col-1 p-1 fw-normal font-15 " style="width:160px;"><?= "Rp. " . $total ?></div>
+            </div>
+            <div class="mx-1 d-flex mt-1 mb-0 align-items-baseline bg-white" style="width:480px;">
+                <div class="mb-0 col-1 px-2 table-custom text-end fw-bold font-15" style="width:320px;">Tax(10%)</div>
+                <div class="m-0 col-1 p-1 fw-normal font-15 " style="width:160px;"><?= "Rp. " . $tax ?></div>
+            </div>
+            <div class="mx-1 d-flex mt-1 mb-0 align-items-baseline rounded-2 rounded-top-0" style="width:480px;color :white;background-color:orange;">
+                <div class="mb-0 col-1 px-2 table-custom text-end fw-bold font-17" style="width:320px;">Total Akhir</div>
+                <div class="m-0 col-1 p-1 fw-bold font-15 " style="width:160px;"><?= "Rp. " . $totalAkhir ?></div>
+            </div>
+            <div class="d-flex mx-1" style="width:475px;">
+                <div style="width:60%;">
+                    <i class="fw-normal p-3 mt-2" style="font-size:14px;">Semoga Harimu Menyenangkan</i>
+                </div>
+                <div class="d-block p-0 m-1 mt-1 mr-0 align-items-end" style="width:40%;">
+                    <?php if ($statusComplete != "") { ?>
+                        <a href="index.html" class="btn btn-primary m-0 mt-1 font-12 fw-normal" style="width:100%;">Kembali</a>
+                        <div class="text-center" style="font-size:12px;"><?= $statusComplete ?></div>
+                    <?php
+                    } else {
+                    ?>
+                        <a href="index.html" class="btn btn-success m-0 mt-1 d-flex font-12 fw-normal px-5" style="width:100%;">Order Lagi</a>
+                        <div class="text-center" style="font-size:12px;">Cek Dulu Pesananmu</div>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
 
