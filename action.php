@@ -137,6 +137,12 @@ $data = [
     array('Ukuran', $patty == "" ? "-" : $patty, $hargaPatty == 0 ? "-" : $hargaPatty)
 ];
 
+$statusComplete = "";
+if ($patty === "Regular" || $patty === "Double Patty") {
+    $statusComplete = "";
+} else {
+    $statusComplete = "*Upss... Ukuran kosong";
+}
 
 ?>
 <!DOCTYPE html>
@@ -248,14 +254,22 @@ $data = [
             <div class="mb-0 col-1 px-2 table-custom text-end fw-bold font-17" style="width:320px;">Total Akhir</div>
             <div class="m-0 col-1 p-1 fw-bold font-15 " style="width:160px;"><?= "Rp. " . $totalAkhir ?></div>
         </div>
-        <div class="d-flex mx-1 align-items-end" style="width:475px;border :2px solid black;">
+        <div class="d-flex mx-1" style="width:475px;">
             <div style="width:60%;">
-                <i class="font-15 fw-normal">Semoga Harimu Menyenangkan</i>
+                <i class="fw-normal p-3 mt-2" style="font-size:14px;">Semoga Harimu Menyenangkan</i>
             </div>
-            <div class="d-block p-0 m-1 mt-2 mr-0">
-                    <a href="index.html" class="btn btn-primary m-0 mt-2 font-15 fw-normal d-inline" style="width:100%;">Kembali ke Menu</a>
-                    <!-- <i class="d-block m-0 p-1 text-center" style="font-size:14px;width:40%;">jaaa</i> -->
-                    <button type="submit" class="btn btn-success m-0 mt-2" value="kirim" style="width:100%;">Pesan</button>
+            <div class="d-block p-0 m-1 mt-1 mr-0 align-items-end" style="width:40%;">
+                <?php if ($statusComplete != "") { ?>
+                    <a href="index.html" class="btn btn-primary m-0 mt-1 font-12 fw-normal" style="width:100%;">Kembali</a>
+                    <div class="text-center" style="font-size:12px;"><?= $statusComplete ?></div>
+                <?php
+                } else {
+                ?>
+
+                    <button type="submit" class="btn btn-success m-0 mt-1" value="kirim" style="width:100%;">Pesan</button>
+                    <div class="text-center" style="font-size:12px;">Cek Dulu Pesananmu</div>
+                <?php
+                } ?>
             </div>
         </div>
     </div>
