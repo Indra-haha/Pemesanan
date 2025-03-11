@@ -134,7 +134,7 @@ $data = [
     array('Menu', $menu, "Rp. " . $hargaMenu),
     array('Roti', $roti, "Rp. " . $hargaRoti),
     array('Isian', $daging, "-"),
-    array('Ukuran', $patty == "" ? "-" : $patty, $hargaPatty == 0 ? "-" : $hargaPatty)
+    array('Ukuran', $patty == "" ? "-" : $patty, $hargaPatty == 0 ? "-" : "Rp. " . $hargaPatty)
 ];
 
 $statusComplete = "";
