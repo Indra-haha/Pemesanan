@@ -162,7 +162,7 @@ if ($patty === "Regular" || $patty === "Double Patty") {
 </head>
 
 <body class="bg-dark-subtle font-secondary">
-    <div class="m-auto p-1" style="width:500px; border : 2px solid black;">
+    <div class="m-auto p-1" style="width:500px;">
         <div class="mx-1 mb-1 p-2 fw-bold font-20 rounded-2 align-items-center d-flex rounded-2 rounded-bottom-0" style="width:480px;background-color:orange;color:white;">
             <div class="w-20 m-0 p-0 align-items-center ms-2">
                 <a href="index.html"><i class="bi bi-arrow-left-square text-white"></i></a>

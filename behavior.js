@@ -194,8 +194,8 @@ reset.addEventListener('click', function() {
     menuVegetarian.classList.remove('box');
     menuKeju.classList.remove('box');
     menuSelada.classList.remove('box');
-    menuTomat.classList.remove('box');
-    menuBawang.classList.remove('box');
+    menuTelur.classList.remove('box');
+    menuPatty.classList.remove('box');
     menuJalapeno.classList.remove('box');
     menuBbq.classList.remove('box');
     menuMustard.classList.remove('box');
