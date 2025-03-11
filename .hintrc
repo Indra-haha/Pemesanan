@@ -7,9 +7,16 @@
     "axe/forms": [
       "default",
       {
-        "label": "off"
+        "label": "off",
+        "select-name": "off"
       }
     ],
-    "button-type": "off"
+    "button-type": "off",
+    "axe/text-alternatives": [
+      "off",
+      {
+        "image-alt": "off"
+      }
+    ]
   }
 }

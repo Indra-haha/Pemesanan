@@ -265,11 +265,11 @@ if ($patty === "Regular" || $patty === "Double Patty") {
                 <?php
                 } else {
                 ?>
-
-                    <button type="submit" class="btn btn-success m-0 mt-1" value="kirim" style="width:100%;">Pesan</button>
+                    <button type="submitPesanan" class="btn btn-success m-0 mt-1" name="submitPesanan" value="kirim" style="width:100%;">Pesan</button>
                     <div class="text-center" style="font-size:12px;">Cek Dulu Pesananmu</div>
                 <?php
                 } ?>
+
             </div>
         </div>
     </div>
