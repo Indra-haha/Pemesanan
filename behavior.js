@@ -199,6 +199,7 @@ reset.addEventListener('click', function() {
     menuJalapeno.classList.remove('box');
     menuBbq.classList.remove('box');
     menuMustard.classList.remove('box');
+    menuSambal.classList.remove('box');
     menuPatty1.classList.remove('box');
     menuPatty2.classList.remove('box');
     menuTeh.classList.remove('box');
